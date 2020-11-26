@@ -11,7 +11,19 @@ html {
 body {
 	min-height: 100vh;
 	font-family: "Josefin Sans", sans-serif;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.container {
+	width: 250px;
+	height: 400px;
 	background-color: crimson;
+	border-radius: 8px;
+	box-shadow: 2px 4px 10px #272727;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -38,9 +50,10 @@ body {
 }
 
 .btns {
+	width: 90%;
 	margin-top: 3rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
@@ -48,8 +61,15 @@ body {
 	font-size: 2rem;
 }
 
+.fa-play,
+.fa-pause,
+.fa-repeat {
+	pointer-events: none;
+}
+
 .btn {
-	padding: 1.2rem;
+	width: 5rem;
+	height: 5rem;
 	color: white;
 	background-color: transparent;
 	outline: none;

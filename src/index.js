@@ -10,7 +10,7 @@ let interval = null;
 
 btns.forEach((btn) => {
 	btn.addEventListener("click", (e) => {
-		let target = e.path[1].id;
+		let target = e.target.id;
 		if (target === "start") {
 			clearInterval(interval);
 			interval = setInterval(start, 1000);
@@ -35,15 +35,15 @@ let timeCondition = (domClass, format) => {
 let start = () => {
 	sec++;
 	timeCondition(s, sec);
-	if (sec >= 60) {
+	if (sec / 60 === 1) {
 		sec = 00;
 		min++;
 		timeCondition(m, min);
-	}
-	if (min >= 60) {
-		min = 00;
-		hr++;
-		timeCondition(h, hr);
+		if (min / 60 === 1) {
+			min = 00;
+			hr++;
+			timeCondition(h, hr);
+		}
 	}
 };
 
