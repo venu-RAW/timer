@@ -25,6 +25,6 @@
 	
 # Technologies Used
 
-	- HTML -CSS -JAVASCRIPT 
+  - HTML - CSS - JAVASCRIPT 
 	  
 
