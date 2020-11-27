@@ -35,13 +35,13 @@ let timeCondition = (domClass, format) => {
 let start = () => {
 	sec++;
 	timeCondition(s, sec);
-	if (sec / 60 === 1) {
-		sec = 00;
+	if (sec > 59) {
 		min++;
+		sec = 00;
 		timeCondition(m, min);
-		if (min / 60 === 1) {
-			min = 00;
+		if (min > 59) {
 			hr++;
+			min = 00;
 			timeCondition(h, hr);
 		}
 	}
